@@ -1,0 +1,17 @@
+scikit-learn contains a function that shuffles the dataset and splits it for you: the
+**train_test_split function. This function extracts 75% of the rows in the data as the
+training set, together with the corresponding labels for this data. The remaining 25%
+of the data, together with the remaining labels, is declared as the test set.
+
+his is inspired by the standard formulation f(x)=y in mathematics,
+where x is the input to a function and y is the output. Following more conventions
+from mathematics, we use a capital X because the data is a two-dimensional array (a
+matrix) and a lowercase y because the target is a one-dimensional array (a vector).
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(
+iris_dataset['data'], iris_dataset['target'], random_state=0)
+
+
+* digits.data gives access to the features that can be used to classify the samples
+
